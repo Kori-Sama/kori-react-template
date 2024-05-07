@@ -1,13 +1,12 @@
 module.exports = {
   root: true,
-  files: ["**/*.{ts,tsx}"],
   env: { browser: true, es2020: true },
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
   ],
-  ignorePatterns: ["dist", ".eslintrc.cjs"],
+  ignorePatterns: ["dist", ".eslintrc.cjs", "tailwind.config.js"],
   parser: "@typescript-eslint/parser",
   plugins: ["react-refresh"],
   rules: {
@@ -16,5 +15,6 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "react-hooks/exhaustive-deps": "off",
+    "react-refresh/only-export-components": "off",
   },
 };
